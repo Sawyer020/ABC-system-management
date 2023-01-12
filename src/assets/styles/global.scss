@@ -1,0 +1,24 @@
+$color:#fcf;
+//@ is for less, $ for scss
+
+body{
+    background-color: $color;
+    //disable typing select
+    user-select: none;
+}
+
+img{
+    //disable picture dragging
+    -webkit-user-drag: none;
+}
+
+//home page layout
+.logo{
+    height: 32px;
+    margin: 16px;
+    background: rgba(255,255,255,0.3);
+}
+
+.site-layout .site-layout-background{
+    background: rgb(226, 226, 226);
+}
