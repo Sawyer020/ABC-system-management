@@ -2,10 +2,13 @@ import React, { Children, lazy } from "react"
 import Home from "../views/Home"
 // import About from "../views/About"
 // import User from "../views/User"
+
+//Lazy Loading: only load resources when needing
 const About = lazy(() => import("../views/About"))
 const User = lazy(() => import("../views/User"))
 const Page1 = lazy(() => import("../views/Page1"))
 const Page2 = lazy(() => import("../views/Page2"))
+const Page3_1 = lazy(() => import("../views/Page3_1"))
 
 
 //Navigate for redirect
@@ -42,8 +45,19 @@ const routes = [
             {
                 path: "/page2",
                 element: withLoadingComponent(<Page2 />)
-            }
+            },
+            {
+                path: "/page3/page3_1",
+                element: withLoadingComponent(<Page3_1 />)
+            },
         ]
+    },
+    // <------- Nested router ends
+
+    // If the user access the path not existed, redirect to page1
+    {
+        path:"*",
+        element:<Navigate to="/page1" />
     }
 
     //     {

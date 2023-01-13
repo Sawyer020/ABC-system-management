@@ -1,62 +1,22 @@
-import {
-    DesktopOutlined,
-    FileOutlined,
-    PieChartOutlined,
-    TeamOutlined,
-    UserOutlined,
-} from '@ant-design/icons';
-import type { MenuProps } from 'antd';
 import { Breadcrumb, Layout, Menu } from 'antd';
 import React, { useState } from 'react';
-import { Outlet, useNavigate } from "react-router-dom"
+import { Outlet} from "react-router-dom"
+import MainMenu from "@/components/MainMenu" //import LeftSideMenu from components
 
 const { Header, Content, Footer, Sider } = Layout;
 
-type MenuItem = Required<MenuProps>['items'][number];
-
-function getItem(
-    label: React.ReactNode,
-    key: React.Key,
-    icon?: React.ReactNode,
-    children?: MenuItem[],
-): MenuItem {
-    return {
-        key,
-        icon,
-        children,
-        label,
-    } as MenuItem;
-}
-
-const items: MenuItem[] = [
-    getItem('Option 1', '/page1', <PieChartOutlined />),
-    getItem('Option 2', '/page2', <DesktopOutlined />),
-    getItem('User', 'sub1', <UserOutlined />, [
-        getItem('Tom', '3'),
-        getItem('Bill', '4'),
-        getItem('Alex', '5'),
-    ]),
-    getItem('Team', 'sub2', <TeamOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
-    getItem('Files', '9', <FileOutlined />),
-];
 
 const View: React.FC = () => {
     const [collapsed, setCollapsed] = useState(false);
-    const navigateTo = useNavigate()
+    // const navigateTo = useNavigate()
 
-    const menuClick = (e:{key:string})=>{
-        console.log("Clicked!!", e.key);
-
-        //jump to corresponding router. Using hook jump to new page
-        navigateTo(e.key)
-    }
-
+    
     return (
         <Layout style={{ minHeight: '100vh' }}>
             {/* Left Side Bar */}
             <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
-                <div className="logo" />
-                <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} onClick={menuClick}/>
+                <div className="logo" />    
+                <MainMenu></MainMenu>
             </Sider>
             {/* Right Content */}
             <Layout className="site-layout">
