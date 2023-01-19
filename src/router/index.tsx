@@ -2,6 +2,7 @@ import React, { Children, lazy } from "react"
 import Home from "../views/Home"
 // import About from "../views/About"
 // import User from "../views/User"
+import Login from "../views/Login"
 
 //Lazy Loading: only load resources when needing
 const About = lazy(() => import("../views/About"))
@@ -53,6 +54,11 @@ const routes = [
         ]
     },
     // <------- Nested router ends
+
+    {
+      path:"/login",
+      element: <Login />
+    },
 
     // If the user access the path not existed, redirect to page1
     {

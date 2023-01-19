@@ -118,8 +118,21 @@ const Comp: React.FC = () => {
 
     let firstOpenKey:string = "";
     // Contradistinction
+    function findKey(obj:{key:string}){
+        return obj.key === currentRoute.pathname
+    }
 
-    const [openKeys, setOpenKeys] = useState(['']);
+    for(let i=0; i<items.length; i++){
+        // items[?]['children'].find(findKey) return boolean
+        // ('childiren' is exist?) && ('children is empty or not?') && (find key in 'children')
+        if(items[i]!['children'] && items[i]!['children'].length>1 && items[i]!['children'].find(findKey)){
+            // '!' : items[i]! means 'items' must be not empty
+            firstOpenKey = items[i]!.key as string;
+            break;
+        }
+    }
+
+    const [openKeys, setOpenKeys] = useState([firstOpenKey]);
     const handleOpenChange = (keys: string[]) => {
         //array 'keys' save the value of 'items' and tell which meau button is open
         console.log(keys);
