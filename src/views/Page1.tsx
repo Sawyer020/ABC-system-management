@@ -5,9 +5,12 @@ const View = () => {
     // Using 'userSelector' to get data
     const dispatch = useDispatch()
 
-    // * Control 'num' *
-    const { num } = useSelector((state: RootState) => ({
-        num: state.handleNum.num
+    // * Control 'num' and 'sarr' *
+    /* when 'state' is called, we have 'combineReduces', 
+    so we need to extract the content specifically*/
+    const { num, sarr} = useSelector((state: RootState) => ({
+        num: state.handleNum.num,
+        sarr: state.handleArr.sarr
     }))
 
     // Using 'useDispatch' to modify data
@@ -27,10 +30,6 @@ const View = () => {
         dispatch(numStatus.asynActions.asyncAdd1)
     }
 
-    // * Control 'sarr' *
-    const { sarr } = useSelector((state: RootState) => ({
-        sarr: state.handleArr.sarr
-    }))
 
     const changeArr = () => {
         dispatch({ type: "sarrPush", val: 100 })
