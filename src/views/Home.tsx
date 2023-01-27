@@ -15,10 +15,11 @@ const View: React.FC = () => {
         <Layout style={{ minHeight: '100vh' }}>
             {/* Left Side Bar */}
             <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
-                <div className="logo" />    
+                <div className="logo">ABC Management</div>
+
                 <MainMenu></MainMenu>
             </Sider>
-            {/* Right Content */}
+            {/* Right Side Content */}
             <Layout className="site-layout">
                 {/* Header */}
                 <Header className="site-layout-background" style={{ paddingLeft: '16px' }}>

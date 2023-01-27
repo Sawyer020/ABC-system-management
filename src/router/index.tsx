@@ -10,6 +10,11 @@ const User = lazy(() => import("../views/User"))
 const Page1 = lazy(() => import("../views/Page1"))
 const Page2 = lazy(() => import("../views/Page2"))
 const Page3_1 = lazy(() => import("../views/Page3_1"))
+const Page3_2 = lazy(() => import("../views/Page3_2"))
+const Page3_3 = lazy(() => import("../views/Page3_3"))
+const Page4_1 = lazy(() => import("../views/Page4_1"))
+const Page4_2 = lazy(() => import("../views/Page4_2"))
+const Page5 = lazy(() => import("../views/Page5"))
 
 
 //Navigate for redirect
@@ -50,6 +55,26 @@ const routes = [
             {
                 path: "/page3/page3_1",
                 element: withLoadingComponent(<Page3_1 />)
+            },
+            {
+                path: "/page3/page3_2",
+                element: withLoadingComponent(<Page3_2 />)
+            },
+            {
+                path: "/page3/page3_3",
+                element: withLoadingComponent(<Page3_3 />)
+            },
+            {
+                path: "/page4/page4_1",
+                element: withLoadingComponent(<Page4_1 />)
+            },
+            {
+                path: "/page4/page4_2",
+                element: withLoadingComponent(<Page4_2 />)
+            },
+            {
+                path: "/page5",
+                element: withLoadingComponent(<Page5 />)
             },
         ]
     },
