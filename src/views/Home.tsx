@@ -15,7 +15,7 @@ const View: React.FC = () => {
         <Layout style={{ minHeight: '100vh' }}>
             {/* Left Side Bar */}
             <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
-                <div className="logo">ABC Management</div>
+                <div className="logo">ABC-Management</div>
 
                 <MainMenu></MainMenu>
             </Sider>
