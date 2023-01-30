@@ -1,13 +1,14 @@
 import {
     DesktopOutlined,
     FileOutlined,
+    LogoutOutlined,
     PieChartOutlined,
     TeamOutlined,
     UserOutlined,
 } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Menu } from 'antd';
-import React, { Children, useState } from 'react';
+import React, { Children, useState, useEffect } from 'react';
 import { useNavigate, useLocation } from "react-router-dom"
 
 
@@ -90,9 +91,9 @@ const items: MenuItem[] = [
         ]
     },
     {
-        label: 'Option 5',
-        key: '/page5',
-        icon: <FileOutlined />
+        label: 'Log out',
+        key: '/login',
+        icon: <LogoutOutlined />
     }
 ]
 

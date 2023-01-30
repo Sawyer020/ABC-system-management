@@ -1,6 +1,7 @@
-import { Breadcrumb, Layout, Menu } from 'antd';
+import { Breadcrumb, Button, Layout, Menu } from 'antd';
+import { HomeOutlined, UserOutlined} from '@ant-design/icons';
 import React, { useState } from 'react';
-import { Outlet} from "react-router-dom"
+import { Outlet } from "react-router-dom"
 import MainMenu from "@/components/MainMenu" //import LeftSideMenu from components
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -10,7 +11,6 @@ const View: React.FC = () => {
     const [collapsed, setCollapsed] = useState(false);
     // const navigateTo = useNavigate()
 
-    
     return (
         <Layout style={{ minHeight: '100vh' }}>
             {/* Left Side Bar */}
@@ -25,8 +25,14 @@ const View: React.FC = () => {
                 <Header className="site-layout-background" style={{ paddingLeft: '16px' }}>
                     {/* Breadcrumb */}
                     <Breadcrumb style={{ lineHeight: '64px' }}>
-                        <Breadcrumb.Item>User</Breadcrumb.Item>
-                        <Breadcrumb.Item>Bill</Breadcrumb.Item>
+                        <Breadcrumb.Item href="">
+                            <HomeOutlined />
+                        </Breadcrumb.Item>
+                        <Breadcrumb.Item href="">
+                            <UserOutlined />
+                            <span>Application List</span>
+                        </Breadcrumb.Item>
+                        <Breadcrumb.Item>Application</Breadcrumb.Item>
                     </Breadcrumb>
                 </Header>
                 {/* Text Box*/}
@@ -35,7 +41,7 @@ const View: React.FC = () => {
                     <Outlet />
                 </Content>
                 {/* Footnote */}
-                <Footer style={{ textAlign: 'center', padding: 0, lineHeight: '48px'}}>Ant Design ©2023 Created by Ant UED</Footer>
+                <Footer style={{ textAlign: 'center', padding: 0, lineHeight: '48px' }}>Ant Design ©2023 Created by Ant UED</Footer>
             </Layout>
         </Layout>
     );

@@ -46,7 +46,7 @@ function BeforeRouterEnter(){
   if(location.pathname!=='/login' && !token){
     return <ToLogin />
   }
-
+  
   return outlet
 }
 
