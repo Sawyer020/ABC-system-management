@@ -94,7 +94,7 @@ Login the page with this account, message would print if login successful.
 ```sh
 If the user try to edit the path for going back login page, message also print:
 ```
-<img src="src/image/screenshots/alreadyloggedin.png" width="200px" height="50px">
+<img src="src/image/screenshots/alreadyloggedin.png" width="200px" height="80px">
 
 
 *Thank for the incredible design of canvas UI from 'LEGE'*
