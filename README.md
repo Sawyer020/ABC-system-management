@@ -77,11 +77,51 @@ path:"/", //redirect
 ]
 export default routes
 ```
-## Development Process Brief - basic functions
-- Example 2:
+## Development Process Brief - Basic Functions
+#### Login Page
+<img src="src/image/screenshots/loginpage.png" width="640px" height="400px">
 
-![Alt text](src/image/screenshots/overall.png?raw=true "Title")
-<img src="src/image/screenshots/overall.png" width="100" height="100">
+- Given account
+```sh
+Account: tdtest1
+Password:123456
+Captcha:888888
+----------------
+Login the page with this account, message would print if login successful.
+```
+<img src="src/image/screenshots/successful.png" width="320px" height="160px">
+
+```sh
+If the user try to edit the path for going back login page, message also print:
+```
+<img src="src/image/screenshots/alreadyloggin.png" width="320px" height="160px">
+
+
+*Thank for the incredible design of canvas UI from 'LEGE'*
+
+#### Main Page:
+<img src="src/image/screenshots/overall.png" width="640px" height="400px">
+
+- Function 1(Synchronous):
+<img src="src/image/screenshots/sample1.png" src="src/image/screenshots/sample2.png" width="500px" height="300px">
+
+```sh
+synchronously add number with function 'onClick'
+```
+- Function 2(Asynchronous):
+<img src="src/image/screenshots/sample2.png" width="500px" height="300px">
+
+```sh
+asynchronously add number with function 'onClick', the result displays after 1000ms
+```
+- Function 3(+100 array):
+<img src="src/image/screenshots/sample3.png" width="500px" height="300px">
+
+```sh
+add val=100 to the array
+```
+
+
 
 
 
