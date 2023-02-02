@@ -154,10 +154,26 @@ add val=100 to the array
 ```
 
 
+## Development Process Brief - Encapsulation
+Example:
+- Instead of using 'switch', traverse the keys in the object'actionNames' is more efficient and reducing redundant code from adding new functions in the future developmemt
+```sh
+// switch (action.type) {
+    //     case handleArr.add1:
+    //         handleArr.actions[handleArr.add1](newState, action)
+    //         break;
+    //     case handleArr.add2:
+    //         handleArr.actions[handleArr.add2](newState, action)
+    //         break;
+    //     default:
+    //         break;
+    // }
 
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[product-screenshot]: images/screenshot.png
+    for (let key in handleArr.actionNames) {
+        //Using '===' to check both value and type
+        if (action.type === handleArr.actionNames[key]) {
+            handleArr.actions[handleArr.actionNames[key]](newState, action);
+            break;
+        }
+    }
+```
