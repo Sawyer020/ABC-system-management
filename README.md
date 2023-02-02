@@ -79,13 +79,12 @@ export default routes
 ```
 ## Development Process Brief - basic functions
 - Example 2:
-```sh
+
 ![Alt text](src/image/screenshots/overall.png?raw=true "Title")
 
 
 
-```
-	
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [product-screenshot]: images/screenshot.png
