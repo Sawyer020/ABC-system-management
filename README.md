@@ -79,7 +79,25 @@ export default routes
 ```
 ## Development Process Brief - Basic Functions
 #### Login Page
+<img src="src/image/screenshots/loginpage.png" width="640px" height="400px">
 
+- Given account
+```sh
+Account: tdtest1
+Password:123456
+Captcha:888888
+----------------
+Login the page with this account, message would print if login successful.
+```
+<img src="src/image/screenshots/successful.png" width="320px" height="160px">
+
+```sh
+If the user try to edit the path for going back login page, message also print:
+```
+<img src="src/image/screenshots/alreadyloggedin.png" width="320px" height="160px">
+
+
+*Thank for the incredible design of canvas UI from 'LEGE'*
 
 #### Main Page:
 <img src="src/image/screenshots/overall.png" width="640px" height="400px">
