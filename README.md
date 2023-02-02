@@ -81,7 +81,7 @@ export default routes
 - Example 2:
 
 ![Alt text](src/image/screenshots/overall.png?raw=true "Title")
-<img src="src/image/screenshots/overall.png" width="50" height="50">
+<img src="src/image/screenshots/overall.png" width="100" height="100">
 
 
 
