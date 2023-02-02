@@ -1,3 +1,4 @@
+import { Button } from "antd"
 import { useSelector, useDispatch } from "react-redux"
 import numStatus from "@/store/NumStatus"
 
@@ -39,10 +40,10 @@ const View = () => {
         <div className='home'>
             <p>This is page1</p>
             <p>{num}</p>
-            <button onClick={changeNum}>Synchrounus Button</button>
-            <button onClick={changeNum2}>Asynchronous Button</button>
+            <Button type="primary" onClick={changeNum}>Synchrounus Button</Button>
+            <Button type="dashed" onClick={changeNum2}>Asynchronous Button</Button>
             <p>{sarr}</p>
-            <button onClick={changeArr}>Button</button>
+            <Button onClick={changeArr}>Button</Button>
         </div>
     )
 }
