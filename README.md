@@ -89,12 +89,12 @@ Captcha:888888
 ----------------
 Login the page with this account, message would print if login successful.
 ```
-<img src="src/image/screenshots/successful.png" width="200px" height="100px">
+<img src="src/image/screenshots/successful.png" width="200px" height="50px">
 
 ```sh
 If the user try to edit the path for going back login page, message also print:
 ```
-<img src="src/image/screenshots/alreadyloggedin.png" width="200px" height="100px">
+<img src="src/image/screenshots/alreadyloggedin.png" width="200px" height="50px">
 
 
 *Thank for the incredible design of canvas UI from 'LEGE'*
