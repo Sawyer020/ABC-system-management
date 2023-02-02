@@ -82,6 +82,29 @@ export default routes
 npm run dev
 * press o to open *
 ```
+## Development Process Brief - Request API
+- Request captcha images from baseURL and send Login request
+```sh
+// Captcha request
+export const CaptchaAPI = ():Promise<CaptchaAPIRes> => request.get("/prod-api/captchaImage");
+
+// Login request
+export const LoginAPI = (params:LoginAPIReq):Promise<LoginAPIRes> => request.post("/prod-api/login",params);
+```
+- Unable to login without "abc-management-token"
+```sh
+if(loginAPIRes.code==200){
+    //1. Login successfully reminder
+    message.success("Login Successfully!");
+    //2. Store token
+    localStorage.setItem("abc-management-token",loginAPIRes.token);
+    //3. Jump to page1
+    navigateTo("/page1")
+    //4. Deleted local 'uuid'
+    localStorage.removeItem("uuid")
+}
+```
+
 ## Development Process Brief - Basic Functions
 #### Login Page
 <img src="src/image/screenshots/loginpage.png" width="640px" height="400px">
@@ -91,7 +114,11 @@ npm run dev
 Account: tdtest1
 Password:123456
 Captcha:888888
-----------------
+
+*Incorrect info would have 'code:500' in console which login is not approved.*
+------------------------------------------------------------------------------
+```
+```sh
 Login the page with this account, message would print if login successful.
 ```
 <img src="src/image/screenshots/successful.png" width="200px" height="50px">
