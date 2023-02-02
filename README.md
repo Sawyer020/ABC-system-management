@@ -77,6 +77,11 @@ path:"/", //redirect
 ]
 export default routes
 ```
+### Launch Local Server
+```sh
+npm run dev
+* press o to open *
+```
 ## Development Process Brief - Basic Functions
 #### Login Page
 <img src="src/image/screenshots/loginpage.png" width="640px" height="400px">
