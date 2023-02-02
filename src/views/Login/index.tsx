@@ -92,7 +92,8 @@ const view = () => {
             <div className={styles.loginBox + " loginbox"}>
                 {/* Title */}
                 <div className={styles.title}>
-                    <h1>ABC Mangement&nbsp; - &nbsp;Background System</h1>
+                    <h1>ABC System Mangement&nbsp; - &nbsp;Login</h1>
+                    <p>For_Better_Future</p>
                 </div>
                 {/* InputBox */}
                 <div className="form">
